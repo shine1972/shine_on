@@ -131,26 +131,8 @@ with col_t2:
     st.metric("IRR BANCA (TIR)", f"{irr_annuo:.3f} %")
     st.write(f"• Provvigione Dealer: **{c_dealer:.2f} €**")
     st.write(f"• Provvigione Agente: **{c_agente:.2f} €**")
-    # --- FIRMA IN BASSO ---
+   # --- FIRMA IN BASSO (VERSIONE COMPATIBILE CLOUD) ---
 st.markdown("---")
-st.markdown(
-    """
-    <style>
-    .footer {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        color: #888888;
-        text-align: center;
-        padding: 20px;
-        font-size: 14px;
-        font-style: italic;
-    }
-    </style>
-    <div class="footer">
-        Made with ❤️ by NC Finservice
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+col_f1, col_f2, col_f3 = st.columns([1, 2, 1])
+with col_f2:
+    st.caption("Made with ❤️ by **NC Finservice**")
